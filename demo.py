@@ -11,8 +11,9 @@ token_params = {
 
 reserve_libcal_space_params = {
     "start" : "2023-08-13T22:00:00+00:00",
-    "test" : 1,
 
+    "test" : 0,
+    
     "bookings": [{
     # 18451 - Student Centre, Group Study Room 2.17
     "id": 18451,
@@ -20,9 +21,11 @@ reserve_libcal_space_params = {
     }]
 }
 
+
 print(datetime.now())
-execution_time = datetime(2023, 8, 11, 9, 45, 25)
+execution_time = datetime(2023, 8, 11, 10, 0, 50)
 print(execution_time)
+
 
 def book_study_space():
     r = requests.post("https://uclapi.com/libcal/space/reserve", json=reserve_libcal_space_params, params=token_params)
