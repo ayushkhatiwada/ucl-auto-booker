@@ -1,0 +1,26 @@
+If time is before 12:00 -> Can book today, and 2 days in the future
+day 0, 1, 2
+e.g if time is Monday 11:00 -> can book for Monday, Tuesday, Wednesday
+
+If time is after 12:00 -> Can book today, and 3 days in the future
+day 0, 1, 2, 3
+e.g. if time is Monday 13:00 -> can book for Monday, Tuesday, Wednesday, Thursday
+
+Can only book rooms from the current time onwards - cannot book into the past
+Can only book in 30 min intervals
+
+-----------------------------------------------------------------------------------------
+Focus on booking times that aren't available on ucl website - bookings that are >=3 days ahead
+Booking time opens at 3 days before at 12:00
+
+function():
+
+    1 - Get booking time
+    2 - Get time 3 days back at 12:00 - execution time
+
+    How to get time 3 days back? 
+    Can't just subtract 3 from the day number
+    1 - 3 == -2 ? Leap years?
+
+    3 - Run post request at execution time
+

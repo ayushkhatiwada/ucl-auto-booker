@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "categories": [
+    {
+      "lid": 872,
+      "name": "Student Centre",
+      "categories": [
+        {
+          "cid": 1497,
+          "name": "Study Space",
+          "formid": 0,
+          "public": 1,
+          "admin_only": 0,
+          "google": false
+        },
+        {
+          "cid": 2529,
+          "name": "PC Desk",
+          "formid": 0,
+          "public": 1,
+          "admin_only": 0,
+          "google": false
+        },
+        {
+          "cid": 5428,
+          "name": "Group Study",
+          "formid": 0,
+          "public": 1,
+          "admin_only": 0,
+          "google": false
+        },
+        {
+          "cid": 5429,
+          "name": "Single Study Pods",
+          "formid": 0,
+          "public": 1,
+          "admin_only": 0,
+          "google": false
+        }
+      ]
+    }
+  ]
+}

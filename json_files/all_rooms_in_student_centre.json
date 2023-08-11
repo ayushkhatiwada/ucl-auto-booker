@@ -1,0 +1,64 @@
+{
+    "ok": true,
+    "items": [
+        {
+            "id": 18451,
+            "name": "Group Study Room 2.17",
+            "description": "<p>Group Study Room 2.17</p>\r\n\r\n<p><strong><span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Maximum capacity:</span></span></span></strong><span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\"> 5<br />\r\n<strong><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Facilities:</span></strong> Plug points with USB<br />\r\n<strong><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Building:</span></strong> </span></span></span><a href=\"http://www.ucl.ac.uk/maps/student-centre\"><span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Student Centre, 27-28 Gordon Square</span></span></span></a>&nbsp;<span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\"><br />\r\n<strong><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Location:</span></strong> 2nd floor</span></span></span></p>\r\n",
+            "terms_and_conditions": "",
+            "image": "//libapps-eu.s3.amazonaws.com/accounts/141033/images/SC_group_study_2.17_web.jpg",
+            "capacity": 5,
+            "formid": 0,
+            "is_bookable_as_whole": true,
+            "is_event_location": false,
+            "zone_id": 427,
+            "google": false,
+            "exchange": false
+        },
+
+        {
+            "id": 18444,
+            "name": "Group Study Room 2.02",
+            "description": "<p>Group Study Room 2.02</p>\r\n\r\n<p><strong><span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Maximum capacity:</span></span></span></strong><span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\"> 4<br />\r\n<strong><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Facilities:</span></strong> Plug points with USB<br />\r\n<strong><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Building:</span></strong> </span></span></span><a href=\"http://www.ucl.ac.uk/maps/student-centre\"><span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Student Centre, 27-28 Gordon Square</span></span></span></a>&nbsp;<span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\"><br />\r\n<strong><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Location:</span></strong> 2nd floor</span></span></span></p>\r\n",
+            "terms_and_conditions": "",
+            "image": "//libapps-eu.s3.amazonaws.com/accounts/141033/images/SC_group_room_2.02_web.jpg",
+            "capacity": 4,
+            "formid": 0,
+            "is_bookable_as_whole": true,
+            "is_event_location": false,
+            "zone_id": 427,
+            "google": false,
+            "exchange": false
+        },
+
+        {
+            "id": 18445,
+            "name": "Group Study Room 2.03",
+            "description": "<p>Group Study Room 2.03</p>\r\n\r\n<p><strong><span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Maximum capacity:</span></span></span></strong><span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\"> 4<br />\r\n<strong><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Facilities:</span></strong> Plug points with USB<br />\r\n<strong><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Building:</span></strong> </span></span></span><a href=\"http://www.ucl.ac.uk/maps/student-centre\"><span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Student Centre, 27-28 Gordon Square</span></span></span></a>&nbsp;<span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\"><br />\r\n<strong><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Location:</span></strong> 2nd floor</span></span></span></p>\r\n",
+            "terms_and_conditions": "",
+            "image": "//libapps-eu.s3.amazonaws.com/accounts/141033/images/SC_group_room_2.03_web.jpg",
+            "capacity": 4,
+            "formid": 0,
+            "is_bookable_as_whole": true,
+            "is_event_location": false,
+            "zone_id": 427,
+            "google": false,
+            "exchange": false
+        },
+
+        {
+            "id": 18446,
+            "name": "Group Study Room 2.05",
+            "description": "<p>Group Study Room 2.05</p>\r\n\r\n<p><strong><span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Maximum capacity:</span></span></span></strong><span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\"> 4<br />\r\n<strong><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Facilities:</span></strong> Plug points with USB<br />\r\n<strong><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Building:</span></strong> </span></span></span><a href=\"http://www.ucl.ac.uk/maps/student-centre\"><span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Student Centre, 27-28 Gordon Square</span></span></span></a>&nbsp;<span style=\"font-size:10.5pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\"><br />\r\n<strong><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Location:</span></strong> 2nd floor</span></span></span></p>\r\n",
+            "terms_and_conditions": "",
+            "image": "//libapps-eu.s3.amazonaws.com/accounts/141033/images/SC_group_room_2.05_web.jpg",
+            "capacity": 4,
+            "formid": 0,
+            "is_bookable_as_whole": true,
+            "is_event_location": false,
+            "zone_id": 427,
+            "google": false,
+            "exchange": false
+        }
+    ]
+}

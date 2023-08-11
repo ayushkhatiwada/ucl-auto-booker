@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCL Auto Booker</title>
+    <link rel="stylesheet" href="../static/book_space.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__container">
+
+            <!-- UCL AutoBooker Logo -->
+            <a href="signed_in.html" id="navbar__logo">UCL AutoBooker</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="navbar__menu">
+                <!-- Home, Book Rooms options  -->
+                <li class="navbar__item">
+                    <a href="signed_in.html" class="navbar__links"> Home </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="book_space.html" class="navbar__links"> Book Rooms </a>
+                </li>
+                <!-- Welcome User Display-->
+                <li class="navbar__btn">
+                    <a href="signed_in.html" class="button"> Welcome Ayush K </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- Background Image -->
+    <div class="banner"></div>
+    
+
+    <!-- Booking Form -->
+    <form>
+    
+    <!-- choose room -->
+    <div class="choose-room-container">
+        <div class="select">
+            <select name="format" id="format" required>
+                <option value="" selected disabled>Choose Room</option>
+                <option value="2.17">2.17</option>
+                <option value="2.02">2.02</option>
+                <option value="2.03">2.03</option>
+                <option value="2.05">2.05</option>
+                <option value="2.10">2.10</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- date picker with calendar -->
+    <div class="select-date-container">
+        <form>
+        <input class="select-date" type="datetime-local" placeholder="Select Date">
+        </form>
+    </div>
+
+    <!-- choose start time -->
+    <div class="start-time-container">
+        <div class="select">
+            <select name="start-time" id="start-time">
+                <option selected disabled>Start Time</option>
+                <!-- JavaScript will populate the options -->
+            </select>
+        </div>
+    </div>
+
+    <!-- choose end time -->
+    <div class="end-time-container">
+        <div class="select">
+            <select name="end-time" id="end-time">
+                <option selected disabled>End Time</option>
+                <!-- JavaScript will populate the options -->
+            </select>
+        </div>
+    </div>
+
+    <!-- submit button -->
+    <div class="submit-button-container">
+        <button type="submit" class="submit-button">Submit</button>
+    </div>
+
+    </form>
+
+    <script>
+        // Function to populate the start & end time options
+        function populateTimeOptions(selectElement, startHour, endHour) {
+            for (let hour = startHour; hour <= endHour; hour++) {
+                const option = document.createElement("option");
+                option.value = `${hour.toString().padStart(2, '0')}:00`;
+                option.text = `${hour.toString().padStart(2, '0')}:00`;
+                selectElement.appendChild(option);
+            }
+        }
+
+        // Populate start time dropdown (00:00 to 23:00)
+        const startTimeSelect = document.getElementById("start-time");
+        populateTimeOptions(startTimeSelect, 0, 23);
+
+        // Populate end time dropdown (01:00 to 23:00)
+        const endTimeSelect = document.getElementById("end-time");
+        populateTimeOptions(endTimeSelect, 1, 23);
+
+        // Manually add 00:00 (next day) option to end time dropdown
+        const additionalOption = document.createElement("option");
+        additionalOption.value = "00:00";
+        additionalOption.text = "00:00 (next day)";
+        endTimeSelect.appendChild(additionalOption);
+    </script>
+
+
+    <!-- Flatpickr for date-picker - https://flatpickr.js.org/examples/#datetime -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("input[type=datetime-local]", {});
+    </script>
+
+
+</body>
+</html>
+
+
+
+<!-- <a href="https://uclapi.com/oauth/authorise?client_id=3574900202627382.9436735244241114&state=ayush">
+    <img src="https://s3.eu-west-2.amazonaws.com/uclapi-static/SignInWithUCLSmall.png" width="270" height="100">
+</a> -->

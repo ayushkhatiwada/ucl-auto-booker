@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "bookings": {
+    "success": "this booking would have been successfully placed, but you supplied the test flag."
+  }
+}

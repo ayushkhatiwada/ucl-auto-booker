@@ -1,0 +1,41 @@
+Student Centre:
+location ID: 872
+id: 18451
+
+
+
+404 status_code probably means url is incorrect
+
+
+Junk
+
+# headers = {
+#     "Content-Type": "application/json"
+#     }
+
+# r = requests.post(f"https://uclapi.com/libcal/space/reserve?token={ACCESS_TOKEN}&client_secret={CLIENT_SECRET}", headers=headers, json=reserve_params)
+# print(r.status_code)
+# print(r.text)
+
+
+# response = self.client.post(
+#     f'/libcal/space/reserve?token={self.oauth_token.token}&client_secret={self.app.client_secret}',
+#     payload, format='json'
+# )
+
+
+# reserve_params = {
+    
+#     "token" : ACCESS_TOKEN,
+#     "client_secret" : CLIENT_SECRET,
+
+#     "start" : "2023-08-05T13:00:00+0000",
+#     "test" : 0,
+
+#     "bookings": [{
+
+#     "id": 18451,
+#     "to": "2023-08-05T14:00:00+0000",
+#     # "seat_id": 
+#     }]
+# }

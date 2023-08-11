@@ -1,0 +1,130 @@
+{
+  "ok": true,
+  "bookings": [
+    {
+      "eid": 18451,
+      "cid": 5428,
+      "lid": 872,
+      "from_date": "2023-08-03T02:30:00+01:00",
+      "to_date": "2023-08-03T04:30:00+01:00",
+      "created": "2023-08-02T12:31:37+01:00",
+      "status": "Cancelled by System",
+      "location_name": "Student Centre",
+      "category_name": "Group Study",
+      "item_name": "Group Study Room 2.17",
+      "cancelled": "2023-08-03T02:01:06+00:00"
+    },
+    {
+      "eid": 18451,
+      "cid": 5428,
+      "lid": 872,
+      "from_date": "2023-08-03T10:00:00+01:00",
+      "to_date": "2023-08-03T11:00:00+01:00",
+      "created": "2023-08-02T19:11:08+01:00",
+      "status": "Cancelled by System",
+      "location_name": "Student Centre",
+      "category_name": "Group Study",
+      "item_name": "Group Study Room 2.17",
+      "cancelled": "2023-08-03T09:31:06+00:00"
+    },
+    {
+      "eid": 18451,
+      "cid": 5428,
+      "lid": 872,
+      "from_date": "2023-08-03T11:30:00+01:00",
+      "to_date": "2023-08-03T14:30:00+01:00",
+      "created": "2023-08-02T11:49:45+01:00",
+      "status": "Confirmed",
+      "location_name": "Student Centre",
+      "category_name": "Group Study",
+      "item_name": "Group Study Room 2.17"
+    },
+    {
+      "eid": 18451,
+      "cid": 5428,
+      "lid": 872,
+      "from_date": "2023-08-03T15:00:00+01:00",
+      "to_date": "2023-08-03T18:00:00+01:00",
+      "created": "2023-08-01T11:32:01+01:00",
+      "status": "Confirmed",
+      "location_name": "Student Centre",
+      "category_name": "Group Study",
+      "item_name": "Group Study Room 2.17"
+    },
+    {
+      "eid": 18451,
+      "cid": 5428,
+      "lid": 872,
+      "from_date": "2023-08-03T18:00:00+01:00",
+      "to_date": "2023-08-03T18:30:00+01:00",
+      "created": "2023-08-02T19:06:48+01:00",
+      "status": "Cancelled by User",
+      "location_name": "Student Centre",
+      "category_name": "Group Study",
+      "item_name": "Group Study Room 2.17",
+      "cancelled": "2023-08-02T18:09:11+00:00"
+    },
+    {
+      "eid": 18451,
+      "cid": 5428,
+      "lid": 872,
+      "from_date": "2023-08-03T18:00:00+01:00",
+      "to_date": "2023-08-03T18:30:00+01:00",
+      "created": "2023-08-02T19:11:08+01:00",
+      "status": "Confirmed",
+      "location_name": "Student Centre",
+      "category_name": "Group Study",
+      "item_name": "Group Study Room 2.17"
+    },
+    {
+      "eid": 18451,
+      "cid": 5428,
+      "lid": 872,
+      "from_date": "2023-08-03T19:00:00+01:00",
+      "to_date": "2023-08-03T19:30:00+01:00",
+      "created": "2023-08-02T19:06:48+01:00",
+      "status": "Cancelled by User",
+      "location_name": "Student Centre",
+      "category_name": "Group Study",
+      "item_name": "Group Study Room 2.17",
+      "cancelled": "2023-08-02T18:09:11+00:00"
+    },
+    {
+      "eid": 18451,
+      "cid": 5428,
+      "lid": 872,
+      "from_date": "2023-08-03T19:00:00+01:00",
+      "to_date": "2023-08-03T19:30:00+01:00",
+      "created": "2023-08-02T19:11:08+01:00",
+      "status": "Confirmed",
+      "location_name": "Student Centre",
+      "category_name": "Group Study",
+      "item_name": "Group Study Room 2.17"
+    },
+    {
+      "eid": 18451,
+      "cid": 5428,
+      "lid": 872,
+      "from_date": "2023-08-03T20:00:00+01:00",
+      "to_date": "2023-08-03T22:00:00+01:00",
+      "created": "2023-08-02T19:06:48+01:00",
+      "status": "Cancelled by User",
+      "location_name": "Student Centre",
+      "category_name": "Group Study",
+      "item_name": "Group Study Room 2.17",
+      "cancelled": "2023-08-02T18:09:11+00:00"
+    },
+    {
+      "eid": 18451,
+      "cid": 5428,
+      "lid": 872,
+      "from_date": "2023-08-03T20:00:00+01:00",
+      "to_date": "2023-08-03T21:00:00+01:00",
+      "created": "2023-08-02T19:11:08+01:00",
+      "status": "Confirmed",
+      "location_name": "Student Centre",
+      "category_name": "Group Study",
+      "item_name": "Group Study Room 2.17"
+    }
+  ]
+}
