@@ -7,6 +7,7 @@
     <title>UCL Auto Booker</title>
     <link rel="stylesheet" href="../static/book_space.css">
 
+    <!-- Flatpick for calendar -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
@@ -48,51 +49,51 @@
     <!-- Booking Form -->
     <form>
     
-    <!-- choose room -->
-    <div class="choose-room-container">
-        <div class="select">
-            <select name="room-number" id="room-number-id" required>
-                <option value="" selected disabled>Choose Room</option>
-                <option value="2.17">2.17</option>
-                <option value="2.02">2.02</option>
-                <option value="2.03">2.03</option>
-                <option value="2.05">2.05</option>
-                <option value="2.10">2.10</option>
-            </select>
+        <!-- choose room -->
+        <div class="choose-room-container">
+            <div class="select">
+                <select name="room-number" id="room-number-id" required>
+                    <option value="" selected disabled>Choose Room</option>
+                    <option value="2.17">2.17</option>
+                    <option value="2.02">2.02</option>
+                    <option value="2.03">2.03</option>
+                    <option value="2.05">2.05</option>
+                    <option value="2.10">2.10</option>
+                </select>
+            </div>
         </div>
-    </div>
 
-    <!-- date picker with calendar -->
-    <div class="select-date-container">
-        <form>
-        <input class="select-date" type="datetime-local" placeholder="Select Date">
-        </form>
-    </div>
-
-    <!-- choose start time -->
-    <div class="start-time-container">
-        <div class="select">
-            <select name="start-time" id="start-time-id">
-                <option selected disabled>Start Time</option>
-                <!-- JavaScript will populate the options -->
-            </select>
+        date picker with calendar
+        <div class="select-date-container">
+            <form>
+            <input class="select-date" type="datetime-local" placeholder="Select Date">
+            </form>
         </div>
-    </div>
 
-    <!-- choose end time -->
-    <div class="end-time-container">
-        <div class="select">
-            <select name="end-time" id="end-time-id">
-                <option selected disabled>End Time</option>
-                <!-- JavaScript will populate the options -->
-            </select>
+        <!-- choose start time -->
+        <div class="start-time-container">
+            <div class="select">
+                <select name="start-time" id="start-time-id" required>
+                    <option value="" selected disabled>Start Time</option>
+                    <!-- JavaScript will populate the options -->
+                </select>
+            </div>
         </div>
-    </div>
 
-    <!-- submit button -->
-    <div class="submit-button-container">
-        <button type="submit" class="submit-button">Submit</button>
-    </div>
+        <!-- choose end time -->
+        <div class="end-time-container">
+            <div class="select">
+                <select name="end-time" id="end-time-id" required>
+                    <option value="" selected disabled>End Time</option>
+                    <!-- JavaScript will populate the options -->
+                </select>
+            </div>
+        </div>
+
+        <!-- submit button -->
+        <div class="submit-button-container">
+            <button type="submit" class="submit-button">Submit</button>
+        </div>
 
     </form>
 

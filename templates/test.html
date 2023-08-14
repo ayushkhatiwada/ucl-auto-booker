@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Picker with jQuery UI</title>
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include jQuery UI library -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            // Initialize datepicker
+            $("#datepicker").datepicker();
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label for="datepicker">Select a Date:</label>
+        <input type="text" id="datepicker" name="selectedDate">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
