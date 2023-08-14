@@ -30,10 +30,12 @@
     border-radius: .25em;
 }
 
+/* Placeholder for select date box */
 ::placeholder {
     color:    rgb(255, 255, 255);
-    padding: 0 .5em;
+    padding: 0.5em;
 }
+
 
 .start-time-container {
     display: flex;
