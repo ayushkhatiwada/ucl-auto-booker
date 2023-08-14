@@ -12,13 +12,14 @@
     margin-top: 100px;
 }
 
+
 .select-date-container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     margin-top: 90px;
-}
+} 
 
 .select-date {
     font-size: 1em;
@@ -29,7 +30,6 @@
     border-radius: .25em;
 }
 
-/* "Select Date" Placeholder */
 ::placeholder {
     color:    rgb(255, 255, 255);
     padding: 0 .5em;
