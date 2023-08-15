@@ -8,13 +8,11 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+
 @app.route("/index.html")
 def home_2():
     return render_template("index.html")
 
-# @app.route("/login")
-# def uclapi_login():
-#     return redirect(url)
 
 @app.route("/callback")
 def recieve_callback():
@@ -32,24 +30,36 @@ def recieve_callback():
     }
 
     r = requests.get("https://uclapi.com/oauth/token", params=get_token_params)
-    print(r.json())
+    # print(r.json())
     ACCESS_TOKEN = r.json()['token']
     with open("constants.py", "a") as f:
         f.write(f'\nACCESS_TOKEN = "{ACCESS_TOKEN}"')
-    print()
 
     # Redirect user to the signed in home page
     return render_template("signed_in.html")
 
+
 @app.route("/signed_in.html")
 def signed_in():
     return render_template("signed_in.html")
+
 
 @app.route("/book_space.html")
 def book_space():
     return render_template("book_space.html")
 
 
+# Form from book_space.html sent here ( <form action="/process_booking" method="post"> )
+@app.route("/process_booking", methods=["POST"])
+def process_booking():
+    room_number = request.form['room-number']
+    date = request.form['selected-date']
+    start_time = request.form['start-time']
+    end_time = request.form['end-time']
+    print(room_number, date, start_time, end_time)
+    # 2.17 2023-08-18 14:00 15:00
+    
+    return render_template("book_space.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
