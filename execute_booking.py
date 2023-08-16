@@ -16,7 +16,7 @@ def excecute_booking(room_number, date, start_time, end_time):
         ### Need to adjust time zone difference (+01:00) depending on whether it is GMT or BST
 
 
-    # NEED lookup table to convert room number into space id
+    # NEED lookup table to convert room number into room id
     room_to_id = { "2.17" : 18451 }
     room_id = room_to_id[room_number]
 
@@ -75,3 +75,7 @@ def excecute_booking(room_number, date, start_time, end_time):
 # Depending on what building and space category the user chooses - the user must be able to choose from a different set of spaces
 
 # Need to account for different building opening and closing times
+
+# Need to make it work for study spaces as well - not just rooms 
+## change room_number -> study_space_number
+## change room_id -> study_space_id

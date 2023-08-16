@@ -58,7 +58,9 @@ def process_booking():
     start_time = request.form['start-time']
     end_time = request.form['end-time']
 
-    # make execute booking store the booking information in a datbase
+    # NEED lookup table to convert room number into room id
+    room_to_id = { "2.17" : 18451 }
+    room_id = room_to_id[room_number]
     
     
     print("booking done")
