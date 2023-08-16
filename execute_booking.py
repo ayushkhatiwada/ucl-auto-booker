@@ -35,8 +35,11 @@ def excecute_booking(room_number, date, start_time, end_time):
     }
 
     print(datetime.now())
-    start_time = datetime.fromisoformat(start_time_iso_8601)
-    execution_time = start_time - timedelta(days=3)
+    # Booking times open at 12:00 3 days before desired booking day
+    # Booking made 2 seconds later to account for possible unsynchronised clocks (":02")
+    execution_time_3_days_ahead = date + "T" + "12:00" + ":02+01:00"
+    execution_time_3_days_ahead = datetime.fromisoformat(execution_time_3_days_ahead)
+    execution_time = execution_time_3_days_ahead - timedelta(days=3)
     print("excecution time: ", execution_time)
 
     def book_study_space():
@@ -56,3 +59,6 @@ def excecute_booking(room_number, date, start_time, end_time):
         pass
 
     return 
+
+### Note function needs to differentiate between bookings that can currently me made, and so it is booked straight away, 
+# and bookings that need to be made in the future so 
