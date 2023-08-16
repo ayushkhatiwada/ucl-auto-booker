@@ -1,26 +1,26 @@
-# Show to Ronnie - Time Zone ????
+from apscheduler.schedulers.background import BackgroundScheduler
+from datetime import datetime, timedelta
+from dateutil import parser as date_parser
 
-from constants import *
-import requests
+def my_function():
+    print("Function executed at:", datetime.now())
 
+scheduler = BackgroundScheduler()
 
-token_params = {  
-    "token" : ACCESS_TOKEN,
-    "client_secret" : CLIENT_SECRET,
-}
+# Replace this ISO 8601 datetime string with your specific date and time
+iso_8601_datetime = "2023-08-18T18:30:00+00:00"
+parsed_datetime = date_parser.parse(iso_8601_datetime)
 
-reserve_libcal_space_params = {
-    "start" : "2023-08-11T16:00:00+00:00",
-    "test" : 0,
+# Calculate the time exactly 3 days before the given datetime
+new_datetime = parsed_datetime - timedelta(days=3)
 
-    "bookings": [{
-    # 18451 - Student Centre, Group Study Room 2.17
-    "id": 18451,
-    "to": "2023-08-11T17:00:00+00:00",
-    }]
-}
+scheduler.add_job(my_function, run_date=new_datetime)
 
-r = requests.post("https://uclapi.com/libcal/space/reserve", json=reserve_libcal_space_params, params=token_params)
-print(r.status_code)
-print(r.json())
+scheduler.start()
 
+# Keep the script running
+try:
+    while True:
+        pass
+except (KeyboardInterrupt, SystemExit):
+    scheduler.shutdown()
