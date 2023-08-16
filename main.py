@@ -61,8 +61,11 @@ def process_booking():
     end_time = request.form['end-time']
 
     excecute_booking(room_number, date, start_time, end_time)
+    # will this stil run in the background even if the user closes the page
     
+    print("booking done")
     return render_template("book_space.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
+    # app.run(debug=True)

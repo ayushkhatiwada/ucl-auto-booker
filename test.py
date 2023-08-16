@@ -3,6 +3,7 @@ from constants import *
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime, timedelta
 
+FLAG = True
 
 def excecute_booking(room_number, date, start_time, end_time):
     
@@ -35,8 +36,14 @@ def excecute_booking(room_number, date, start_time, end_time):
     }
 
     print(datetime.now())
-    start_time = datetime.fromisoformat(start_time_iso_8601)
-    execution_time = start_time - timedelta(days=3)
+    # Booking times open at 12:00 3 days before desired booking day
+    # Booking made 2 seconds later to account for possible unsynchronised clocks (":02")
+    execution_time_3_days_ahead = date + "T" + "12:00" + ":02+01:00"
+    execution_time_3_days_ahead = datetime.fromisoformat(execution_time_3_days_ahead)
+    execution_time = execution_time_3_days_ahead - timedelta(days=3)
+    # print("excecution time: ", execution_time)
+
+    execution_time = datetime(2023, 8, 16, 12, 21, 10)
     print("excecution time: ", execution_time)
 
     def book_study_space():
@@ -47,12 +54,16 @@ def excecute_booking(room_number, date, start_time, end_time):
         global FLAG
         FLAG = False
 
-    FLAG = True
+    # FLAG = True
     sch = BackgroundScheduler()
-    sch.add_job(book_study_space, run_date=execution_time)
+    sch.add_job(book_study_space, 'date', run_date=execution_time)
     sch.start()
 
     while FLAG:
         pass
 
+    print("DOEST IT REACH HERE")
     return 
+
+excecute_booking("2.17", "2023-08-28", "15:00", "16:00")
+

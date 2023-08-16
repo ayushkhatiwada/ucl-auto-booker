@@ -4,6 +4,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime, timedelta
 
 
+
 def excecute_booking(room_number, date, start_time, end_time):
     
     print(room_number, date, start_time, end_time)
@@ -40,7 +41,7 @@ def excecute_booking(room_number, date, start_time, end_time):
     execution_time_3_days_ahead = date + "T" + "12:00" + ":02+01:00"
     execution_time_3_days_ahead = datetime.fromisoformat(execution_time_3_days_ahead)
     execution_time = execution_time_3_days_ahead - timedelta(days=3)
-    print("excecution time: ", execution_time)
+    # print("excecution time: ", execution_time)
 
     def book_study_space():
         r = requests.post("https://uclapi.com/libcal/space/reserve", json=reserve_libcal_space_params, params=token_params)
@@ -50,15 +51,28 @@ def excecute_booking(room_number, date, start_time, end_time):
         global FLAG
         FLAG = False
 
+    global FLAG
     FLAG = True
     sch = BackgroundScheduler()
+
+    execution_time = datetime(2023, 8, 16, 12, 23, 50)
+    print("excecution time: ", execution_time)
+
     sch.add_job(book_study_space, run_date=execution_time)
     sch.start()
 
     while FLAG:
         pass
 
+    print("DOEST IT REACH HERE")
     return 
 
 ### Note function needs to differentiate between bookings that can currently me made, and so it is booked straight away, 
-# and bookings that need to be made in the future so 
+# and bookings that need to be made in the future so they are stored and scheduled 
+
+# users must not be able to select a date in the past
+
+# Also need to map out all buildings, and study spaces,
+# Depending on what building and space category the user chooses - the user must be able to choose from a different set of spaces
+
+# Need to account for different building opening and closing times
