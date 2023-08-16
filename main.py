@@ -1,7 +1,7 @@
 import requests
 from constants import *
 from flask import Flask, request, render_template
-from execute_booking import excecute_booking
+from store_booking_in_database import store_booking_in_database
 app = Flask(__name__)
 
 
@@ -62,8 +62,9 @@ def process_booking():
     room_to_id = { "2.17" : 18451 }
     room_id = room_to_id[room_number]
     
-    
-    print("booking done")
+    # Store booking in bookings.db database
+    store_booking_in_database(room_id, date, start_time, end_time)
+
     return render_template("book_space.html")
 
 # separate process - reads the database and books
