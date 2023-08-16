@@ -1,3 +1,15 @@
+# Python anywhere + github + testing 
+# Database
+
+
+
+
+# Convince shingai to get Ronnie to teach us coding 
+
+
+
+
+
 # Need help on design process
 
 # Consants.py? - Where to store oauth token?

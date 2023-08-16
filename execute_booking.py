@@ -55,7 +55,7 @@ def excecute_booking(room_number, date, start_time, end_time):
     FLAG = True
     sch = BackgroundScheduler()
 
-    execution_time = datetime(2023, 8, 16, 12, 23, 50)
+    execution_time = datetime(2023, 8, 17, 12, 25, 30)
     print("excecution time: ", execution_time)
 
     sch.add_job(book_study_space, run_date=execution_time)
@@ -64,7 +64,6 @@ def excecute_booking(room_number, date, start_time, end_time):
     while FLAG:
         pass
 
-    print("DOEST IT REACH HERE")
     return 
 
 ### Note function needs to differentiate between bookings that can currently me made, and so it is booked straight away, 

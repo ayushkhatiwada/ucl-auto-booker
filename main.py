@@ -1,8 +1,6 @@
 import requests
 from constants import *
 from flask import Flask, request, render_template
-from apscheduler.schedulers.background import BackgroundScheduler
-from datetime import datetime, timedelta
 from execute_booking import excecute_booking
 app = Flask(__name__)
 
@@ -60,12 +58,19 @@ def process_booking():
     start_time = request.form['start-time']
     end_time = request.form['end-time']
 
-    excecute_booking(room_number, date, start_time, end_time)
-    # will this stil run in the background even if the user closes the page
+    # make execute booking store the booking information in a datbase
+    
     
     print("booking done")
     return render_template("book_space.html")
 
+# separate process - reads the database and books
+# execute_booking should store the booking in a datbase
+# separate thread - continously checks the database and makes booking
+# Search: How to create a thread in Python 
+
+
 if __name__ == "__main__":
     app.run()
     # app.run(debug=True)
+
