@@ -16,6 +16,6 @@ params = {
 r = requests.get("https://uclapi.com/libcal/space/seats", params=params)
 print(r.status_code)
 
-with open('json_files/88_all_libcal_seats_in_location.json', 'w') as f:
-    json.dump(r.json(), f)
+with open('../88_all_libcal_seats_in_location.json', 'w') as f:
+    json.dump(r.json(), f, indent=2)
 

@@ -1,4 +1,4 @@
-# Better Design for this? JSON? Database?
+# Better Design for this? JSON? Database? - Probably best if JSON
 LOGIN_URL = "https://uclapi.com/oauth/authorise/?client_id=3574900202627382.9436735244241114&state=ayush"
 
 # Table 1 - sql lite
@@ -24,3 +24,4 @@ ACCESS_TOKEN = "uclapi-user-c25a0d0716a5c58-7ce172116b77662-7111bdf5521fbdc-36ba
 
 
 # exponential back off algorithms 
+ACCESS_TOKEN = "uclapi-user-c25a0d0716a5c58-7ce172116b77662-7111bdf5521fbdc-36ba40f8f148b0f"

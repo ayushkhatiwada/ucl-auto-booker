@@ -4,7 +4,6 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime, timedelta
 
 
-
 def excecute_booking(room_number, date, start_time, end_time):
     
     print(room_number, date, start_time, end_time)

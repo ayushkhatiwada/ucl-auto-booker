@@ -12,5 +12,5 @@ get_all_libcal_locations_params = {
 r = requests.get("https://uclapi.com/libcal/space/locations", params=get_all_libcal_locations_params)
 print(r.status_code)
 
-with open('json_files/1_all_libcal_locations.json', 'w') as f:
-    json.dump(r.json(), f)
+with open('../data_from_ucl_api/1_all_libcal_locations.json', 'w') as f:
+    json.dump(r.json(), f, indent=2)

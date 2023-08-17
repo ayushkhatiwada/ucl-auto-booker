@@ -12,6 +12,6 @@ params = {
 r = requests.get("https://uclapi.com/libcal/space/personal_bookings", params=params)
 print(r.status_code)
 
-with open('json_files/6_personal_bookings.json', 'w') as f:
+with open('../data_from_ucl_api/6_personal_bookings.json', 'w') as f:
     json.dump(r.json(), f, indent=2)
 

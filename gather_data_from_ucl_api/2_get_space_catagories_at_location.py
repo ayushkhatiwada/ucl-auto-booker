@@ -15,6 +15,5 @@ params = {
 r = requests.get("https://uclapi.com/libcal/space/categories", params=params)
 print(r.status_code)
 
-with open('json_files/2_space_catagories_at_location.json', 'w') as f:
-    json.dump(r.json(), f)
-
+with open('../data_from_ucl_api/2_space_catagories_at_location.json', 'w') as f:
+    json.dump(r.json(), f, indent=2)

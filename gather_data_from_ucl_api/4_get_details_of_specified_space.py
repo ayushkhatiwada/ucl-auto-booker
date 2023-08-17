@@ -16,6 +16,6 @@ r = requests.get("https://uclapi.com/libcal/space/item", params=params)
 print(r.status_code)
 print(r.json())
 
-with open('json_files/4_details_of_specified_space.json', 'w') as f:
+with open('../data_from_ucl_api/4_details_of_specified_space.json', 'w') as f:
     json.dump(r.json(), f, indent=2)
 
