@@ -16,6 +16,7 @@ def home_2():
     return render_template("index.html")
 
 
+# Callback url which handles the OAuth
 @app.route("/callback")
 def recieve_callback():
     # receive parameters
@@ -34,6 +35,9 @@ def recieve_callback():
     r = requests.get("https://uclapi.com/oauth/token", params=get_token_params)
     # print(r.json())
     ACCESS_TOKEN = r.json()['token']
+
+
+    # Store Access Token in constants.py | Needs to be moved to JSON or database
     with open("constants.py", "a") as f:
         f.write(f'\nACCESS_TOKEN = "{ACCESS_TOKEN}"')
 
@@ -59,7 +63,7 @@ def process_booking():
     start_time = request.form['start-time']
     end_time = request.form['end-time']
 
-    # Get the time the request is made, which is the current time right now
+    # Get the time the booking request is made, which is the current time right now
     request_made_time = datetime.now().isoformat(' ', 'seconds')
 
     # Lookup table to convert room number into room id | Need to move this to database and expand options
