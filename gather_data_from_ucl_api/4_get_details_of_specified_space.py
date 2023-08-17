@@ -9,7 +9,7 @@ params = {
 
     # (string) ids - Comma delimited list of LibCal space IDs
     # 18451 - Space ID of "Group Study Room 2.17"
-    "ids" : 18446
+    "ids" : "18451"
 }
 
 r = requests.get("https://uclapi.com/libcal/space/item", params=params)

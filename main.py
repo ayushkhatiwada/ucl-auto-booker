@@ -59,11 +59,12 @@ def process_booking():
     end_time = request.form['end-time']
 
     # NEED lookup table to convert room number into room id
-    room_to_id = { "2.17" : 18451 }
-    room_id = room_to_id[room_number]
+    room_num_to_id = { "2.02":18444, "2.03":18445, "2.05":18446, "2.10":18447, "2.12":18448, "2.13":18449, "2.15":19225,
+                        "2.16" : 18450, "2.17" : 18451}
+    room_id = room_num_to_id[room_number]
     
     # Store booking in bookings.db database
-    store_booking_in_database(room_id, date, start_time, end_time)
+    store_booking_in_database(room_id, date, start_time, end_time, "pending")
 
     return render_template("book_space.html")
 
