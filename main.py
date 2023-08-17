@@ -58,7 +58,7 @@ def process_booking():
     start_time = request.form['start-time']
     end_time = request.form['end-time']
 
-    # NEED lookup table to convert room number into room id
+    # lookup table to convert room number into room id - Need to move to database and expand options
     room_num_to_id = { "2.02":18444, "2.03":18445, "2.05":18446, "2.10":18447, "2.12":18448, "2.13":18449, "2.15":19225,
                         "2.16" : 18450, "2.17" : 18451}
     room_id = room_num_to_id[room_number]
