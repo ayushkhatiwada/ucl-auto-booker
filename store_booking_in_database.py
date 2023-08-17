@@ -17,6 +17,7 @@ class Booking(Base):
     date = Column("date", String)
     start_time = Column("start_time", String)
     end_time = Column("end_time", String)
+    request_made_time = Column("request_made_time", String)
     status = Column("status", String)
     """
     Status of booking. Could be:
@@ -25,12 +26,13 @@ class Booking(Base):
     Could be changed to a number (0:pending, 1:completed) to save space
     """
 
-    def __init__(self, room_number, room_id, date, start_time, end_time, status):
+    def __init__(self, room_number, room_id, date, start_time, end_time, status, request_made_time):
         self.room_number = room_number
         self.room_id = room_id
         self.date = date
         self.start_time = start_time
         self.end_time = end_time
+        self.request_made_time = request_made_time
         self.status = status
 
 
@@ -45,8 +47,8 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # Function to create a new Booking instance and store it in the database
-def store_booking_in_database(room_number, room_id, date, start_time, end_time, status="pending"):
-    new_booking = Booking(room_number=room_number, room_id=room_id, date=date, start_time=start_time, end_time=end_time, status=status)
+def store_booking_in_database(room_number, room_id, date, start_time, end_time, request_made_time, status="pending"):
+    new_booking = Booking(room_number=room_number, room_id=room_id, date=date, start_time=start_time, end_time=end_time, request_made_time=request_made_time, status=status)
     session.add(new_booking)
 
     # Commit the transaction to save the booking to the database + Close the session

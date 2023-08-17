@@ -1,7 +1,6 @@
-def foo(num, string):
+from datetime import datetime
 
-    print("num", num)
-    print("string", string)
 
-foo(string="lol", num=5)
-
+current_time = datetime.now().isoformat(' ', 'seconds')
+print(current_time)
+print(type(current_time))
