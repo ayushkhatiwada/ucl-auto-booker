@@ -11,13 +11,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Include jQuery UI library -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Include jQuery UI JS -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
+        // Initialize datepicker
         $(function() {
-            // Initialize datepicker
             $("#select-date-id").datepicker({
-                    dateFormat: "yy-mm-dd"
-                });
+                    dateFormat: "yy-mm-dd",
+                    minDate: 0  // Prevents selecting dates in the past
+            });
         });
     </script>
 </head>
@@ -55,11 +57,12 @@
 
     <!-- Background Image -->
     <div class="banner"></div>
-    
+
 
     <!-- Booking Form -->
     <form action="/process_booking" method="post">
-    
+
+
         <!-- choose room -->
         <div class="choose-room-container">
             <div class="select">
@@ -139,12 +142,6 @@
         endTimeSelect.appendChild(additionalOption);
     </script>
 
-
-    <!-- Flatpickr for date-picker - https://flatpickr.js.org/examples/#datetime
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script>
-        flatpickr("input[type=datetime-local]", {});
-    </script> -->
 
 
 </body>
