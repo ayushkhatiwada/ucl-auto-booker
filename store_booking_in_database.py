@@ -12,6 +12,7 @@ class Booking(Base):
     __tablename__ = "bookings"
 
     id = Column(Integer, primary_key=True)
+    room_number = Column("room_number", String)
     room_id = Column("room_id", Integer)
     date = Column("date", String)
     start_time = Column("start_time", String)
@@ -24,7 +25,8 @@ class Booking(Base):
     Could be changed to a number (0:pending, 1:completed) to save space
     """
 
-    def __init__(self, room_id, date, start_time, end_time, status):
+    def __init__(self, room_number, room_id, date, start_time, end_time, status):
+        self.room_number = room_number
         self.room_id = room_id
         self.date = date
         self.start_time = start_time
@@ -43,8 +45,8 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # Function to create a new Booking instance and store it in the database
-def store_booking_in_database(room_id, date, start_time, end_time, status="pending"):
-    new_booking = Booking(room_id=room_id, date=date, start_time=start_time, end_time=end_time, status=status)
+def store_booking_in_database(room_number, room_id, date, start_time, end_time, status="pending"):
+    new_booking = Booking(room_number=room_number, room_id=room_id, date=date, start_time=start_time, end_time=end_time, status=status)
     session.add(new_booking)
 
     # Commit the transaction to save the booking to the database + Close the session

@@ -64,7 +64,7 @@ def process_booking():
     room_id = room_num_to_id[room_number]
     
     # Store booking in bookings.db database
-    store_booking_in_database(room_id, date, start_time, end_time, "pending")
+    store_booking_in_database(room_number, room_id, date, start_time, end_time, "pending")
 
     return render_template("book_space.html")
 
