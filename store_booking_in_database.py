@@ -18,13 +18,17 @@ class Booking(Base):
     start_time = Column("start_time", String)
     end_time = Column("end_time", String)
     request_made_time = Column("request_made_time", String)
-    status = Column("status", String)
     """
     Status of booking. Could be:
     1. Pending - Book has not been made. Waiting for bookable window to open to execute booking 
     2. Completed - Booking completed
     Could be changed to a number (0:pending, 1:completed) to save space
     """
+    status = Column("status", String)
+
+    # Data will not be initialised upon creation of booking. Will be filled in after booking is completed 
+    booking_completed_time = Column("booking_completed_time", String)
+
 
     def __init__(self, room_number, room_id, date, start_time, end_time, status, request_made_time):
         self.room_number = room_number

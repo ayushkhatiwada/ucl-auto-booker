@@ -77,7 +77,6 @@ def process_booking():
     return render_template("book_space.html")
 
 # separate process - reads the database and books
-# execute_booking should store the booking in a datbase
 # separate thread - continously checks the database and makes booking
 # Search: How to create a thread in Python 
 
