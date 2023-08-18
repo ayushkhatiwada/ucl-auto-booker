@@ -27,4 +27,5 @@ bookings = session.query(Booking).all()
 # Retrieve bookings for a specific room number (e.g., room_number=101)
 room_bookings = session.query(Booking).filter_by(room_number="2.02").all()
 
+print(bookings)
 

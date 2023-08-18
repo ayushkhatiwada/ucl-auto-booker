@@ -17,14 +17,15 @@ class Booking(Base):
     end_time = Column("end_time", String)
     request_made_time = Column("request_made_time", String)
     """
-    Status of booking. Could be:
-    1. Pending - Book has not been made. Waiting for bookable window to open to execute booking 
-    2. Completed - Booking completed
-    Could be changed to a number (0:pending, 1:completed) to save space
+    Status of booking. Options are:
+    0. Requested - Booking has been saved to database
+    1. Executing - Thread/Subprocess has been assigned to booking. Waiting for bookable window to open to execute booking 
+    2. Complete - Booking completed
+    Could be changed to a number (0:requested, 1:executing,  2:completed) to save space
     """
     status = Column("status", String)
 
-    # Data will not be initialised upon creation of booking. Will be filled in after booking is completed 
+    # Variable will not be initialised upon creation of booking request. Will be filled in after booking is completed 
     booking_completed_time = Column("booking_completed_time", String)
 
 
@@ -49,7 +50,7 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # Function to create a new Booking instance and store it in the database
-def store_booking_in_database(room_number, room_id, date, start_time, end_time, request_made_time, status="pending"):
+def store_booking_in_database(room_number, room_id, date, start_time, end_time, request_made_time, status="requested"):
     new_booking = Booking(room_number=room_number, room_id=room_id, date=date, start_time=start_time, end_time=end_time, request_made_time=request_made_time, status=status)
     session.add(new_booking)
 
