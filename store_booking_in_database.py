@@ -1,6 +1,5 @@
-from sqlalchemy import create_engine, Column, String, Integer
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy.orm import sessionmaker, declarative_base
 
 
 # Define the base class for declarative models
@@ -8,7 +7,6 @@ Base = declarative_base()
 
 # Define the Booking class
 class Booking(Base):
-
     __tablename__ = "bookings"
 
     id = Column(Integer, primary_key=True)
