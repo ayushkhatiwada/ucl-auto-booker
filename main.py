@@ -88,6 +88,7 @@ def process_booking():
     # Store booking in bookings.db database
     store_booking_in_database(room_number, room_id, date, start_time, end_time, request_made_time)
 
+    # Booking has been requested. Send user to my_bookings.html page to view their bookings
     return my_bookings()
 
 # separate process - reads the database and books
