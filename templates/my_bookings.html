@@ -36,13 +36,39 @@
         </div>
     </nav>
 
+
     <!-- Background Image -->
     <div class="banner">
     </div>
 
+
+    <h1>My Bookings</h1>
+
+    <!-- Booking data from bookings.db -->
+    <table>
+
+        <tr>
+            <th>Room Number</th>
+            <th>Date</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Status</th>
+        </tr>
+
+        {% for booking in bookings %}
+            <tr>
+                <td>{{ booking[1] }}</td>
+                <td>{{ booking[3] }}</td>
+                <td>{{ booking[4] }}</td>
+                <td>{{ booking[5] }}</td>
+                <td>{{ booking[7] }}</td>
+            </tr>
+
+        {% endfor %}
+    </table>
+
+
 </body>
-
-
 </html>
 
 

@@ -1,4 +1,5 @@
 import requests
+import sqlite3
 from constants import *
 from flask import Flask, request, render_template
 from store_booking_in_database import store_booking_in_database
@@ -55,9 +56,17 @@ def book_space():
     return render_template("book_space.html")
 
 
-@app.route("/my_bookings.html")
+# My Bookings page. Gets data from bookings.db and sends it to my_booking.html to be displayed 
+@app.route('/my_bookings.html')
 def my_bookings():
-    return render_template("my_bookings.html")
+    conn = sqlite3.connect('bookings.db')
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM bookings")
+    bookings_data = cursor.fetchall()
+
+    conn.close()
+    return render_template('my_bookings.html', bookings=bookings_data)
 
 
 # Form from book_space.html sent here ( <form action="/process_booking" method="post"> )
@@ -79,7 +88,7 @@ def process_booking():
     # Store booking in bookings.db database
     store_booking_in_database(room_number, room_id, date, start_time, end_time, request_made_time)
 
-    return render_template("my_bookings.html")
+    return my_bookings()
 
 # separate process - reads the database and books
 # separate thread - continously checks the database and makes booking
