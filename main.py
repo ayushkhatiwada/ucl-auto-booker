@@ -55,8 +55,13 @@ def book_space():
     return render_template("book_space.html")
 
 
+@app.route("/my_bookings.html")
+def my_bookings():
+    return render_template("my_bookings.html")
+
+
 # Form from book_space.html sent here ( <form action="/process_booking" method="post"> )
-@app.route("/process_booking", methods=["POST"])
+@app.route("/my_bookings.html", methods=["POST"])
 def process_booking():
     room_number = request.form['room-number']
     date = request.form['selected-date']
@@ -68,13 +73,13 @@ def process_booking():
 
     # Lookup table to convert room number into room id | Need to move this to database and expand options
     room_num_to_id = { "2.02":18444, "2.03":18445, "2.05":18446, "2.10":18447, "2.12":18448, "2.13":18449, "2.15":19225,
-                        "2.16" : 18450, "2.17" : 18451}
+                        "2.16" : 18450, "2.17" : 18451 }
     room_id = room_num_to_id[room_number]
     
     # Store booking in bookings.db database
     store_booking_in_database(room_number, room_id, date, start_time, end_time, request_made_time)
 
-    return render_template("book_space.html")
+    return render_template("my_bookings.html")
 
 # separate process - reads the database and books
 # separate thread - continously checks the database and makes booking
@@ -82,5 +87,5 @@ def process_booking():
 
 
 if __name__ == "__main__":
-    app.run()
-    # app.run(debug=True)
+    # app.run()
+    app.run(debug=True)
