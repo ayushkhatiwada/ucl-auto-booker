@@ -5,6 +5,7 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+
 .choose-room-container {
     display: flex;
     justify-content: center;
@@ -13,6 +14,7 @@
 }
 
 
+/* Select Date option box */
 .select-date-container {
     display: flex;
     justify-content: center;
@@ -33,7 +35,12 @@
 /* Placeholder for select date box */
 ::placeholder {
     color:    rgb(255, 255, 255);
+}
+
+/* Adding this made the date after selection format nicely (white colour and padding) */
+#select-date-id {
     padding: 0.5em;
+    color: white;
 }
 
 
@@ -44,6 +51,7 @@
     margin-top: 90px;
 }
 
+
 .end-time-container {
     display: flex;
     justify-content: center;
@@ -51,10 +59,11 @@
     margin-top: 90px;
 }
 
-/* formats the disabled selection options e.g. "Choose Room" */
+/* formats the disabled selection options in the dropdown lists e.g. "Choose Room", "Start Time" */
 :disabled {
     color: #c9c9c9;
 }
+
 
 .submit-button-container {
     position: relative;
@@ -73,6 +82,8 @@
     cursor: pointer;
     font-size: 16px;
 }
+
+
 
 
 select {
