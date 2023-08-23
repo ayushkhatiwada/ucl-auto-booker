@@ -18,6 +18,8 @@ def home_2():
 
 
 # Callback url which handles the OAuth
+# http://127.0.0.1:5000/callback - use when testing on laptop
+# https://ayushkhatiwada.eu.pythonanywhere.com/callback - use when deploying on pythonanywhere, I think
 @app.route("/callback")
 def recieve_callback():
     # receive parameters
